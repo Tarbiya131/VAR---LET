@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// Областью видимости переменных, объявленных ключевым словом let,
+//  является блок, в котором они объявлены, и все его подблоки.
+//   В этом работа директива let схожа с работой директивы var. 
+//   Основная разница заключается в том, что областью видимости переменной, 
+//   объявленной директивой var, является вся функция, в которой она объявлена.
+        
+var arr = [{}, {}, {}];
+        for (var i = 0; i < arr.length; i++) {
+            arr[i].saySmth = function () {
+                console.log(i)
+            }
+        }
+        console.log(arr[2].saySmth());
+
+        let arr = [{}, {}, {}];
+        for (let i = 0; i < arr.length; i++) {
+            arr[i].saySmth = function () {
+                console.log(i)
+            }
+        }
+
+        console.log(arr[2].saySmth());
+
+      
+
+
+    </script>
+</body>
+</html>
